@@ -1,0 +1,18 @@
+[LOGGER] 2025-01-17 19:39:31.432 PM error : controllers/user.controller.js : createUser : 
+Invalid `prisma.user.create()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`.
+[LOGGER] 2025-01-17 19:39:45.057 PM error : controllers/user.controller.js : createUser : 
+Invalid `prisma.user.create()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`.
+[LOGGER] 2025-01-17 19:56:41.636 PM error : uncaughtException: autenticate is not defined
+ReferenceError: autenticate is not defined
+    at file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/routes/user.route.js:8:30
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)

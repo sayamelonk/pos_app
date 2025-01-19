@@ -1,0 +1,30 @@
+[LOGGER] 2025-01-18 17:17:46.146 PM error : controllers/user.controller.js : createUser : 
+Invalid `prisma.user.create()` invocation:
+
+
+Unique constraint failed on the constraint: `User_userName_key`
+[LOGGER] 2025-01-18 17:24:02.904 PM error : controllers/user.controller.js : createUser : 
+Invalid `prisma.user.create()` invocation:
+
+
+Unique constraint failed on the constraint: `User_userName_key`
+[LOGGER] 2025-01-18 17:24:15.134 PM error : controllers/user.controller.js : loginUser : Cannot read properties of undefined (reading 'sign')
+[LOGGER] 2025-01-18 17:24:16.339 PM error : controllers/user.controller.js : loginUser : Cannot read properties of undefined (reading 'sign')
+[LOGGER] 2025-01-18 17:24:24.993 PM error : controllers/user.controller.js : loginUser : Cannot read properties of undefined (reading 'sign')
+[LOGGER] 2025-01-18 17:25:43.572 PM error : controllers/user.controller.js : loginUser : Cannot read properties of undefined (reading 'sign')
+[LOGGER] 2025-01-18 17:25:47.477 PM error : controllers/user.controller.js : createUser : 
+Invalid `prisma.user.create()` invocation:
+
+
+Unique constraint failed on the constraint: `User_userName_key`
+[LOGGER] 2025-01-18 17:26:02.910 PM error : controllers/user.controller.js : loginUser : Cannot read properties of undefined (reading 'sign')
+[LOGGER] 2025-01-18 17:27:57.692 PM error : controllers/user.controller.js : loginUser : Cannot read properties of undefined (reading 'sign')
+[LOGGER] 2025-01-18 17:30:45.182 PM error : controllers/user.controller.js : loginUser : Cannot read properties of undefined (reading 'sign')
+[LOGGER] 2025-01-18 17:37:24.724 PM error : controllers/user.controller.js:loginUser - Cannot read properties of undefined (reading 'sign')
+[LOGGER] 2025-01-18 17:37:26.001 PM error : controllers/user.controller.js:loginUser - Cannot read properties of undefined (reading 'sign')
+[LOGGER] 2025-01-18 17:39:42.961 PM error : controllers/user.controller.js:loginUser - secretOrPrivateKey must have a value
+[LOGGER] 2025-01-18 18:26:22.509 PM error : controllers/user.controller.js:loginUser - secretOrPrivateKey must have a value
+[LOGGER] 2025-01-18 18:33:26.750 PM error : controllers/user.controller.js:loginUser - secretOrPrivateKey must have a value
+[LOGGER] 2025-01-18 18:35:24.257 PM error : controllers/user.controller.js:loginUser - secretOrPrivateKey must have a value
+[LOGGER] 2025-01-18 18:35:38.135 PM error : controllers/user.controller.js:loginUser - secretOrPrivateKey must have a value
+[LOGGER] 2025-01-18 18:40:01.344 PM error : controllers/user.controller.js:loginUser - secretOrPrivateKey must have a value

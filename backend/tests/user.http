@@ -1,0 +1,60 @@
+### create user
+POST {{ BASE_URL }}/users
+Content-Type: application/json
+{
+  "name": "saya riky3",
+  "userName": "sayariky3",
+  "password": "123456",
+  "confirmPassword": "123456",
+  "role": "admin"
+}
+
+### user login
+POST {{ BASE_URL }}/users/login
+Content-Type: application/json
+{
+  "userName":"sayariky",
+  "password":"123456"
+}
+
+{{
+  $global.accessToken=JSON.parse(response.body).accessToken;
+  $global.refreshToken=JSON.parse(response.body).refreshToken;
+}}
+
+### update user
+PUT {{ BASE_URL }}/users/6
+Content-Type: application/json
+Authorization: Bearer {{ $global.accessToken }}
+{
+  "name": "saya riky aja",
+  "userName": "sayariky3",
+  "password": "123456",
+  "confirmPassword": "123456",
+  "role": "admin"
+}
+
+### delete user
+DELETE {{ BASE_URL }}/users/6
+Content-Type: application/json
+Authorization: Bearer {{ $global.accessToken }}
+
+### get all user
+GET {{ BASE_URL }}/users
+Content-Type: application/json
+Authorization: Bearer {{ $global.accessToken }}
+
+### get user by id
+GET {{ BASE_URL }}/users/1
+Content-Type: application/json
+Authorization: Bearer {{ $global.accessToken }}
+
+### refresh token
+GET {{ BASE_URL }}/users/refresh
+Content-Type: application/json
+Authorization: Bearer {{ $global.refreshToken }}
+
+{{
+  $global.accessToken=JSON.parse(response.body).accessToken;
+  $global.refreshToken=JSON.parse(response.body).refreshToken;
+}}
