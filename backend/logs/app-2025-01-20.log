@@ -16,3 +16,48 @@ ReferenceError: setRefreshToken is not defined
 ReferenceError: setRefreshToken is not defined
     at file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/user.controller.js:206:32
     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+[LOGGER] 2025-01-20 08:56:47.630 AM error : controllers/category.controller.js : createCategory : 
+Invalid `prisma.category.create()` invocation:
+
+{
+  data: {
+    categoryName: "makanan",
++   kategoryName: String
+  }
+}
+
+Argument `kategoryName` is missing.
+[LOGGER] 2025-01-20 09:01:32.370 AM error : controllers/category.controller.js : getAllCategory : 
+Invalid `prisma.category.findMany()` invocation:
+
+{
+  orderaBy: {
+  ~~~~~~~~
+    id: "asc"
+  },
+? where?: CategoryWhereInput,
+? orderBy?: CategoryOrderByWithRelationInput[] | CategoryOrderByWithRelationInput,
+? cursor?: CategoryWhereUniqueInput,
+? take?: Int,
+? skip?: Int,
+? distinct?: CategoryScalarFieldEnum | CategoryScalarFieldEnum[]
+}
+
+Unknown argument `orderaBy`. Did you mean `orderBy`? Available options are marked with ?.
+[LOGGER] 2025-01-20 09:01:48.932 AM error : controllers/category.controller.js : getAllCategory : 
+Invalid `prisma.category.findMany()` invocation:
+
+{
+  orderaBy: {
+  ~~~~~~~~
+    id: "asc"
+  },
+? where?: CategoryWhereInput,
+? orderBy?: CategoryOrderByWithRelationInput[] | CategoryOrderByWithRelationInput,
+? cursor?: CategoryWhereUniqueInput,
+? take?: Int,
+? skip?: Int,
+? distinct?: CategoryScalarFieldEnum | CategoryScalarFieldEnum[]
+}
+
+Unknown argument `orderaBy`. Did you mean `orderBy`? Available options are marked with ?.

@@ -19,7 +19,7 @@ function verifyRefreshToken(token) {
     return JsonWebToken.verify(token, process.env.JWT_REFRESH_SECRET);
   } catch (error) {
     logger.info("controllers/user.controller.js:verifyRefreshToken - " + error);
-    return error;
+    return null;
   }
 }
 
@@ -32,7 +32,7 @@ const verifyAccessToken = (token) => {
     return JsonWebToken.verify(token, process.env.JWT_SECRET);
   } catch (error) {
     logger.info("controllers/user.controller.js:verifyAccessToken - " + error);
-    return error;
+    return null;
   }
 };
 

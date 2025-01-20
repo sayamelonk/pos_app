@@ -2,8 +2,8 @@
 POST {{ BASE_URL }}/users
 Content-Type: application/json
 {
-  "name": "saya riky3",
-  "userName": "sayariky3",
+  "name": "saya riky",
+  "userName": "sayariky",
   "password": "123456",
   "confirmPassword": "123456",
   "role": "admin"
