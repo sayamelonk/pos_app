@@ -1,0 +1,5 @@
+[LOGGER] 2025-01-21 20:37:12.736 PM error : uncaughtException: Router.use() requires a middleware function
+TypeError: Router.use() requires a middleware function
+    at Function.use (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:462:11)
+    at file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/routes/index.js:9:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
