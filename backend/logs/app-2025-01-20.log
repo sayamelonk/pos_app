@@ -22,11 +22,11 @@ Invalid `prisma.category.create()` invocation:
 {
   data: {
     categoryName: "makanan",
-+   kategoryName: String
++   categoryName: String
   }
 }
 
-Argument `kategoryName` is missing.
+Argument `categoryName` is missing.
 [LOGGER] 2025-01-20 09:01:32.370 AM error : controllers/category.controller.js : getAllCategory : 
 Invalid `prisma.category.findMany()` invocation:
 

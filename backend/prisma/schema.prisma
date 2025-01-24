@@ -28,11 +28,11 @@ model Product {
   url               String
   qty               Int
   price             Decimal
-  kategoryId        Int
+  categoryId        Int
   supplierId        Int
   createdAt         DateTime            @default(now())
   updatedAt         DateTime            @updatedAt
-  kategory          Category            @relation(fields: [kategoryId], references: [id])
+  category          Category            @relation(fields: [categoryId], references: [id])
   supplier          Supplier            @relation(fields: [supplierId], references: [id])
   Carts             Carts[]
   Orderdetail       Orderdetail[]

@@ -6,7 +6,7 @@ Content-Type: application/json
 Authorization: Bearer {{$global.accessToken}}
 
 ### get supplier by id
-GET {{ BASE_URL }}/suppliers/1003
+GET {{ BASE_URL }}/suppliers/1000
 Content-Type: application/json
 Authorization: Bearer {{$global.accessToken}}
 
@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 
 ### edit supplier
-PUT {{ BASE_URL }}/suppliers/1003
+PUT {{ BASE_URL }}/suppliers/1001
 Content-Type: application/json
 Authorization: Bearer {{$global.accessToken}}
 {
@@ -35,7 +35,7 @@ Authorization: Bearer {{$global.accessToken}}
 }
 
 ### delete supplier
-DELETE  {{ BASE_URL }}/suppliers/2
+DELETE  {{ BASE_URL }}/suppliers/1001
 Content-Type: application/json
 Authorization: Bearer {{$global.accessToken}}
 

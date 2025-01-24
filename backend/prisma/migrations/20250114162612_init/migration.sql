@@ -16,7 +16,7 @@ CREATE TABLE `Product` (
     `url` VARCHAR(191) NOT NULL,
     `qty` INTEGER NOT NULL,
     `price` DECIMAL(65, 30) NOT NULL,
-    `kategoryId` INTEGER NOT NULL,
+    `categoryId` INTEGER NOT NULL,
     `supplierId` INTEGER NOT NULL,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME(3) NOT NULL,
@@ -144,7 +144,7 @@ CREATE TABLE `Purchasedetail` (
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- AddForeignKey
-ALTER TABLE `Product` ADD CONSTRAINT `Product_kategoryId_fkey` FOREIGN KEY (`kategoryId`) REFERENCES `Category`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `Product` ADD CONSTRAINT `Product_categoryId_fkey` FOREIGN KEY (`categoryId`) REFERENCES `Category`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE `Product` ADD CONSTRAINT `Product_supplierId_fkey` FOREIGN KEY (`supplierId`) REFERENCES `Supplier`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
