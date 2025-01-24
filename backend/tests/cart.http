@@ -1,0 +1,47 @@
+# create cart
+POST {{BASE_URL}}/carts
+Content-Type: application/json
+Authorization: Bearer {{$global.accessToken}}
+{
+  "userId": 1,
+  "productId": 2,
+  "productName": "Sample Product",
+  "qty": 1,
+  "price": 1000,
+  "totalPrice": 1000,
+  "note": ""
+}
+
+# get all cart
+GET {{BASE_URL}}/carts
+Content-Type: application/json
+Authorization: Bearer {{$global.accessToken}}
+
+# get cart by product
+GET {{BASE_URL}}/carts/product/2/1
+Content-Type: application/json
+Authorization: Bearer {{$global.accessToken}}
+
+# update cart
+PUT {{BASE_URL}}/carts/1
+Content-Type: application/json
+Authorization: Bearer {{$global.accessToken}}
+{
+  "userId": 1,
+  "productId": 2,
+  "productName": "Sample Product",
+  "qty": 2,
+  "price": 1000,
+  "totalPrice": 2000,
+  "note": ""
+}
+
+# delete cart by id
+DELETE {{BASE_URL}}/carts/2/1
+Content-Type: application/json
+Authorization: Bearer {{$global.accessToken}}
+
+# delete all cart by user id
+DELETE {{BASE_URL}}/carts/1
+Content-Type: application/json
+Authorization: Bearer {{$global.accessToken}}

@@ -26,3 +26,25 @@ TypeError: Cannot read properties of undefined (reading 'length')
 [LOGGER] 2025-01-25 01:07:42.793 AM error : uncaughtException: Cannot read properties of undefined (reading 'length')
 TypeError: Cannot read properties of undefined (reading 'length')
     at updateProduct (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/product.controller.js:232:31)
+[LOGGER] 2025-01-25 03:04:32.778 AM error : controllers/cart.controller.js : getCartById : 
+Invalid `prisma.carts.findUnique()` invocation:
+
+{
+  where: {
+    productId: 2,
+    userId: 1,
+?   id?: Int,
+?   AND?: CartsWhereInput | CartsWhereInput[],
+?   OR?: CartsWhereInput[],
+?   NOT?: CartsWhereInput | CartsWhereInput[],
+?   price?: DecimalFilter | Decimal,
+?   productName?: StringFilter | String,
+?   qty?: IntFilter | Int,
+?   totalPrice?: DecimalFilter | Decimal,
+?   note?: StringFilter | String,
+?   user?: UserScalarRelationFilter | UserWhereInput,
+?   product?: ProductScalarRelationFilter | ProductWhereInput
+  }
+}
+
+Argument `where` of type CartsWhereUniqueInput needs at least one of `id` arguments. Available options are marked with ?.
