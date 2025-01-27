@@ -1,0 +1,107 @@
+[LOGGER] 2025-01-28 04:40:41.231 AM error : controllers/order.controller.js : createOrder : 
+Invalid `prisma.orders.create()` invocation:
+
+{
+  data: {
+    code: "ORD-1738014041216",
+    userId: 1,
+    date: "2025-01-25",
+          ~~~~~~~~~~~~
+    total: 5000,
+    ppn: 500,
+    grandTotal: 5500
+  }
+}
+
+Invalid value for argument `date`: premature end of input. Expected ISO-8601 DateTime.
+[LOGGER] 2025-01-28 04:44:58.460 AM error : controllers/purchase.controller.js : createPurchase : 
+Invalid `prisma.purchasedetail.create()` invocation:
+
+{
+  data: {
+    productId: 1,
+    productName: "Sample Product",
+    price: 5000,
+    qty: 1,
+    totalPrice: 5000,
+    purchaseId: 1,
++   total: Decimal
+  }
+}
+
+Argument `total` is missing.
+[LOGGER] 2025-01-28 04:46:34.402 AM error : controllers/purchase.controller.js : createPurchase : 
+Invalid `prisma.purchasedetail.create()` invocation:
+
+{
+  data: {
+    productId: 1,
+    productName: "Sample Product",
+    price: 1000,
+    qty: 1,
+    totalPrice: 1000,
+    purchaseId: 2,
++   total: Decimal
+  }
+}
+
+Argument `total` is missing.
+[LOGGER] 2025-01-28 04:47:26.657 AM error : controllers/purchase.controller.js : createPurchase : 
+Invalid `prisma.purchasedetail.create()` invocation:
+
+
+Foreign key constraint violated: `productId`
+[LOGGER] 2025-01-28 04:47:39.397 AM error : controllers/purchase.controller.js : createPurchase : 
+Invalid `prisma.purchasedetail.create()` invocation:
+
+
+Foreign key constraint violated: `productId`
+[LOGGER] 2025-01-28 04:49:35.832 AM error : controllers/purchase.controller.js : createPurchase : 
+Invalid `prisma.product.update()` invocation:
+
+{
+  where: {
+    id: 2
+  },
+  data: {
+    stock: {
+    ~~~~~
+      increment: 1
+    },
+?   code?: String | StringFieldUpdateOperationsInput,
+?   barcode?: String | NullableStringFieldUpdateOperationsInput | Null,
+?   productName?: String | StringFieldUpdateOperationsInput,
+?   image?: String | StringFieldUpdateOperationsInput,
+?   url?: String | StringFieldUpdateOperationsInput,
+?   qty?: Int | IntFieldUpdateOperationsInput,
+?   price?: Decimal | DecimalFieldUpdateOperationsInput,
+?   createdAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   updatedAt?: DateTime | DateTimeFieldUpdateOperationsInput,
+?   category?: CategoryUpdateOneRequiredWithoutProductNestedInput,
+?   supplier?: SupplierUpdateOneRequiredWithoutProductNestedInput,
+?   Carts?: CartsUpdateManyWithoutProductNestedInput,
+?   Orderdetail?: OrderdetailUpdateManyWithoutProductNestedInput,
+?   Orderreturndetail?: OrderreturndetailUpdateManyWithoutProductNestedInput,
+?   Purchasedetail?: PurchasedetailUpdateManyWithoutProductNestedInput
+  }
+}
+
+Unknown argument `stock`. Available options are marked with ?.
+[LOGGER] 2025-01-28 05:46:22.915 AM error : uncaughtException: ENOENT: no such file or directory, open './src/templates/PurchaseTemplate.html'
+Error: ENOENT: no such file or directory, open './src/templates/PurchaseTemplate.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.readFileSync (node:fs:471:35)
+    at generatePdf (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/purchase.controller.js:184:17)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:149:13)
+    at autenticate (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/error.controller.js:24:5)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:175:3)
+    at router (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
