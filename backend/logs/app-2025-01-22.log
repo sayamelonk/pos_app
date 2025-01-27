@@ -1,5 +1,5 @@
-[LOGGER] 2025-01-22 21:06:51.429 PM error : uncaughtException: ENOENT: no such file or directory, open './src/tamplates/SupplierTamplate.html'
-Error: ENOENT: no such file or directory, open './src/tamplates/SupplierTamplate.html'
+[LOGGER] 2025-01-22 21:06:51.429 PM error : uncaughtException: ENOENT: no such file or directory, open './src/Templates/SupplierTemplate.html'
+Error: ENOENT: no such file or directory, open './src/Templates/SupplierTemplate.html'
     at Object.openSync (node:fs:603:3)
     at Object.readFileSync (node:fs:471:35)
     at generatePdf (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/supplier.controller.js:175:17)
@@ -16,8 +16,8 @@ Error: ENOENT: no such file or directory, open './src/tamplates/SupplierTamplate
     at Function.handle (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:175:3)
     at router (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:47:12)
     at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
-[LOGGER] 2025-01-22 21:10:15.883 PM error : uncaughtException: ENOENT: no such file or directory, open './src/tamplates/SupplierTamplate.html'
-Error: ENOENT: no such file or directory, open './src/tamplates/SupplierTamplate.html'
+[LOGGER] 2025-01-22 21:10:15.883 PM error : uncaughtException: ENOENT: no such file or directory, open './src/Templates/SupplierTemplate.html'
+Error: ENOENT: no such file or directory, open './src/Templates/SupplierTemplate.html'
     at Object.openSync (node:fs:603:3)
     at Object.readFileSync (node:fs:471:35)
     at generatePdf (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/supplier.controller.js:175:17)

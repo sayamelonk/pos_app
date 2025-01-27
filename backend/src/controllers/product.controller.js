@@ -332,7 +332,7 @@ export const generatePdf = async (req, res) => {
   let pathFile = "./public/pdf";
   let fileName = "product.pdf";
   let fullPath = pathFile + "/" + fileName;
-  let html = fs.readFileSync("./src/templates/ProductTamplate.html", "utf8");
+  let html = fs.readFileSync("./src/templates/ProductTemplate.html", "utf8");
   let options = {
     format: "A4",
     orientation: "portrait",

@@ -1,0 +1,144 @@
+[LOGGER] 2025-01-27 16:55:17.492 PM error : controllers/order.controller.js : getAllOrder : `$queryRaw` is a tag function, please use it like the following:
+```
+const result = await prisma.$queryRaw`SELECT * FROM User WHERE id = ${1} OR email = ${'user@email.com'};`
+```
+
+Or read our docs at https://www.prisma.io/docs/concepts/components/prisma-client/raw-database-access#queryraw
+
+[LOGGER] 2025-01-27 16:55:33.183 PM error : uncaughtException: Date(...).getFullYear is not a function
+TypeError: Date(...).getFullYear is not a function
+    at orderYearly (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/order.controller.js:316:51)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:149:13)
+    at autenticate (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/error.controller.js:24:5)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:175:3)
+    at router (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:286:9
+[LOGGER] 2025-01-27 17:30:31.381 PM error : controllers/order.controller.js : getAllOrder : `$queryRaw` is a tag function, please use it like the following:
+```
+const result = await prisma.$queryRaw`SELECT * FROM User WHERE id = ${1} OR email = ${'user@email.com'};`
+```
+
+Or read our docs at https://www.prisma.io/docs/concepts/components/prisma-client/raw-database-access#queryraw
+
+[LOGGER] 2025-01-27 17:30:46.575 PM error : controllers/order.controller.js : getAllOrder : `$queryRaw` is a tag function, please use it like the following:
+```
+const result = await prisma.$queryRaw`SELECT * FROM User WHERE id = ${1} OR email = ${'user@email.com'};`
+```
+
+Or read our docs at https://www.prisma.io/docs/concepts/components/prisma-client/raw-database-access#queryraw
+
+[LOGGER] 2025-01-27 17:36:19.874 PM error : uncaughtException: ENOENT: no such file or directory, open './src/templates/OrderTemplate.html'
+Error: ENOENT: no such file or directory, open './src/templates/OrderTemplate.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.readFileSync (node:fs:471:35)
+    at generatePdf (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/order.controller.js:149:17)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:149:13)
+    at autenticate (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/error.controller.js:24:5)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:175:3)
+    at router (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+[LOGGER] 2025-01-27 17:36:57.408 PM error : uncaughtException: ENOENT: no such file or directory, open './src/templates/OrderTemplate.html'
+Error: ENOENT: no such file or directory, open './src/templates/OrderTemplate.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.readFileSync (node:fs:471:35)
+    at generatePdf (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/order.controller.js:149:17)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:149:13)
+    at autenticate (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/error.controller.js:24:5)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:175:3)
+    at router (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+[LOGGER] 2025-01-27 17:57:21.526 PM error : controllers/order.controller.js : generatePdf : startDate.getTime is not a function
+[LOGGER] 2025-01-27 18:03:50.225 PM error : Invalid date format: Start Date - undefined, End Date - undefined
+[LOGGER] 2025-01-27 18:05:25.635 PM error : Invalid date format: Start Date - undefined, End Date - undefined
+[LOGGER] 2025-01-27 18:08:38.530 PM error : uncaughtException: ENOENT: no such file or directory, open './src/templates/OrderTemplate.html'
+Error: ENOENT: no such file or directory, open './src/templates/OrderTemplate.html'
+    at Object.openSync (node:fs:603:3)
+    at Object.readFileSync (node:fs:471:35)
+    at generatePdf (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/order.controller.js:149:17)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:149:13)
+    at autenticate (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/error.controller.js:24:5)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:175:3)
+    at router (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+[LOGGER] 2025-01-27 18:11:24.742 PM error : controllers/product.controller.js:generatePdf - Parse error on line 16:
+...th="100%">      {{ #each orders}}     
+----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID'
+[LOGGER] 2025-01-27 18:20:32.884 PM error : controllers/product.controller.js:generatePdf - Parse error on line 16:
+...th="100%">      {{ #each orders}}     
+----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID'
+[LOGGER] 2025-01-27 18:22:43.207 PM error : controllers/product.controller.js:generatePdf - Parse error on line 16:
+...th="100%">      {{ #each orders}}     
+----------------------^
+Expecting 'ID', 'STRING', 'NUMBER', 'BOOLEAN', 'UNDEFINED', 'NULL', 'DATA', got 'INVALID'
+[LOGGER] 2025-01-27 18:23:13.139 PM error : uncaughtException: excelJS.workbook is not a function
+TypeError: excelJS.workbook is not a function
+    at generateExcel (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/order.controller.js:330:28)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:149:13)
+    at autenticate (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/error.controller.js:24:5)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:175:3)
+    at router (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:286:9
+[LOGGER] 2025-01-27 18:24:37.845 PM error : uncaughtException: excelJS.workbook is not a function
+TypeError: excelJS.workbook is not a function
+    at generateExcel (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/order.controller.js:330:28)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:149:13)
+    at autenticate (file:///Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/src/controllers/error.controller.js:24:5)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at /Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:346:12)
+    at next (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:175:3)
+    at router (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:328:13)
+    at /Applications/XAMPP/xamppfiles/htdocs/POS_APP/backend/node_modules/express/lib/router/index.js:286:9
