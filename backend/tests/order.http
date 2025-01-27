@@ -49,6 +49,7 @@ Authorization: Bearer {{$global.accessToken}}
 }
 
 # order yearly
+# GET {{ BASE_URL }}/orders-year?year=2024
 GET {{ BASE_URL }}/orders-year
 Content-Type: application/json
 Authorization: Bearer {{$global.accessToken}}
