@@ -1,9 +1,11 @@
+import RouteNavigation from "./auth/RouteNavigation";
+
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <RouteNavigation />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
