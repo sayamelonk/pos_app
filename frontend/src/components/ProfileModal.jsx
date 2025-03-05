@@ -1,7 +1,7 @@
 
 const ProfileModal = () => {
   return (
-    <div>ProfileModal</div>
+    <div></div>
   )
 }
 

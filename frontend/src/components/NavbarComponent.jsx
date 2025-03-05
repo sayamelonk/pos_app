@@ -3,9 +3,9 @@ import { Container, Image, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import secureLocalStorage from "react-secure-storage";
 import { FaBuffer, FaChartBar } from "react-icons/fa";
 import { GrTransaction } from "react-icons/gr";
-import ProfileModal from "./ProfileModal";
+import ProfileModal from "./ProfileModal.jsx";
 
-function NavbarComponent() {
+const NavbarComponent = () => {
   const [modalShow, setModalShow] = useState(false);
   const user = secureLocalStorage.getItem("user");
   let nama = "User";
@@ -22,9 +22,9 @@ function NavbarComponent() {
     />
   );
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary print">
       <Container fluid>
-        <Navbar.Brand href="#">POS APP</Navbar.Brand>
+        <Navbar.Brand href="/">POS APP</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -66,9 +66,9 @@ function NavbarComponent() {
                 Supplier
               </NavDropdown.Item>
               <NavDropdown.Item href="/product-report">
-                product
+                Product
               </NavDropdown.Item>
-              <NavDropdown.Item href="/sales-report">sales</NavDropdown.Item>
+              <NavDropdown.Item href="/sales-report">Sales</NavDropdown.Item>
               <NavDropdown.Item href="/purchase-report">
                 Purchase
               </NavDropdown.Item>
@@ -99,6 +99,6 @@ function NavbarComponent() {
       />
     </Navbar>
   );
-}
+};
 
 export default NavbarComponent;
