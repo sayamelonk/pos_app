@@ -46,7 +46,12 @@ const ListCategory = () => {
       method: "DELETE",
     };
     try {
-      await axiosInstance.request(reqOptions);
+      const response = await axiosInstance.request(reqOptions);
+      if (response.data) {
+        toast.success(response.data.message, {
+          position: "top-center",
+        });
+      }
       loadData();
     } catch (error) {
       const errMessage = JSON.parse(error.request.response);
