@@ -7,6 +7,7 @@ import Logout from "../components/Logout";
 import ListCategory from "../components/category/ListCategory";
 import AddCategory from "../components/category/AddCategory";
 import EditCategory from "../components/category/EditCategory";
+import NotFoundPage from "../components/NotFoundPage";
 
 const RouteNavigation = () => {
   const refreshToken = secureLocalStorage.getItem("refreshToken");
@@ -22,6 +23,8 @@ const RouteNavigation = () => {
               <Route path="/category" element={<ListCategory />} />
               <Route path="/category/add" element={<AddCategory />} />
               <Route path="/category/:id" element={<EditCategory />} />
+              {/* Page Not Found */}
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </BrowserRouter>
         </>
