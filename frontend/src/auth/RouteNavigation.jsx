@@ -8,6 +8,9 @@ import ListCategory from "../components/category/ListCategory";
 import AddCategory from "../components/category/AddCategory";
 import EditCategory from "../components/category/EditCategory";
 import NotFoundPage from "../components/NotFoundPage";
+import ListSupplier from "../components/supplier/ListSupplier";
+import AddSupplier from "../components/supplier/AddSupplier";
+import EditSupplier from "../components/supplier/EditSupplier";
 
 const RouteNavigation = () => {
   const refreshToken = secureLocalStorage.getItem("refreshToken");
@@ -25,6 +28,10 @@ const RouteNavigation = () => {
               <Route path="/category/:id" element={<EditCategory />} />
               {/* Page Not Found */}
               <Route path="*" element={<NotFoundPage />} />
+              {/* supplier */}
+              <Route path="/supplier" element={<ListSupplier />} />
+              <Route path="/supplier/add" element={<AddSupplier />} />
+              <Route path="/supplier/:id" element={<EditSupplier />} />
             </Routes>
           </BrowserRouter>
         </>
