@@ -87,6 +87,7 @@ const ListSupplier = () => {
         setLastId(0);
         setData([]);
         setKeyword("");
+        loadData(true);
       }
     } catch (error) {
       const errMessage = JSON.parse(error.request.response);
