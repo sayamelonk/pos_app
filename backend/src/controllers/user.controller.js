@@ -106,12 +106,12 @@ export const loginUser = async (req, res) => {
       },
     });
     if (result) {
-      if (req.body.password == "") {
-        return res.status(500).json({
-          message: "User not found",
-          result: null,
-        });
-      }
+      // if (req.body.password == "") {
+      //   return res.status(500).json({
+      //     message: "User not found",
+      //     result: null,
+      //   });
+      // }
       if (compare(req.body.password, result.password)) {
         // generate token
         result.password = "xxxxxxxxxxxxxxxxxx";
