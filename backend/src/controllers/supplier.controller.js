@@ -8,31 +8,43 @@ import excelJS from "exceljs";
 export const getAllSupplier = async (req, res) => {
   const last_id = parseInt(req.query.lastId) || 0;
   const limit = parseInt(req.query.limit) || 10;
-  const search = req.query.search || "";
-  let result;
+  const search = req.query.search_query || "";
+  let result = [];
   try {
-    if (last_id > 1) {
-      const searchPattern = `${search}%`;
+    if (last_id < 1) {
+      const searchPattern = `%${search}%`;
       result = await prisma.$queryRaw`
-        SELECT id, firstName, lastName, email, phone, address FROM Supplier
-        WHERE (
-          CONCAT(firstName, ' ', lastName) LIKE ${searchPattern}
+      SELECT id, firstName, lastName, phone, email, address 
+      FROM Supplier 
+      WHERE (
+        CONCAT(firstName, ' ', lastName) LIKE ${searchPattern}
+        OR phone LIKE ${searchPattern}
+          OR email LIKE ${searchPattern}
           OR email LIKE ${searchPattern}
           OR phone LIKE ${searchPattern}
-          OR address LIKE ${searchPattern}
-        ) ORDER BY id DESC LIMIT ${parseInt(limit, 10)}`;
+        OR email LIKE ${searchPattern}
+          OR phone LIKE ${searchPattern}
+        OR address LIKE ${searchPattern}
+      )
+      ORDER BY id DESC 
+      LIMIT ${parseInt(limit, 10)}`;
     } else {
       const searchPattern = `%${search}%`;
       const lastId = parseInt(last_id, 10);
       const limitValue = parseInt(limit, 10);
 
       result = await prisma.$queryRaw`
-        SELECT id, firstName, lastName, email, phone, address FROM Supplier
-        WHERE (
-          CONCAT(firstName, ' ', lastName) LIKE ${searchPattern}
+      SELECT id, firstName, lastName, phone, email, address 
+      FROM Supplier 
+      WHERE (
+        CONCAT(firstName, ' ', lastName) LIKE ${searchPattern}
+        OR phone LIKE ${searchPattern}
+          OR email LIKE ${searchPattern}
           OR email LIKE ${searchPattern}
           OR phone LIKE ${searchPattern}
-          OR address LIKE ${searchPattern}
+        OR email LIKE ${searchPattern}
+          OR phone LIKE ${searchPattern}
+        OR address LIKE ${searchPattern}
         ) AND id < ${lastId}
         ORDER BY id DESC LIMIT ${limitValue}`;
     }
@@ -40,7 +52,7 @@ export const getAllSupplier = async (req, res) => {
       message: "success",
       result: result,
       lastId: result.length > 0 ? result[result.length - 1].id : 0,
-      hashMore: result.length >= limit ? true : false,
+      hasMore: result.length >= limit ? true : false,
     });
   } catch (error) {
     logger.error(
@@ -50,7 +62,7 @@ export const getAllSupplier = async (req, res) => {
       message: error.message,
       result: null,
       lastId: result.length > 0 ? result[result.length - 1].id : 0,
-      hashMore: result.length >= limit ? true : false,
+      hasMore: result.length >= limit ? true : false,
     });
   }
 };

@@ -1,4 +1,4 @@
-import { compare } from "bcrypt";
+import { compare } from "../utils/bcrypt.js";
 import { encrypt } from "../utils/bcrypt.js";
 import prisma from "../utils/client.js";
 import { logger } from "../utils/winston.js";
@@ -106,6 +106,12 @@ export const loginUser = async (req, res) => {
       },
     });
     if (result) {
+      if (req.body.password == "") {
+        return res.status(500).json({
+          message: "User not found",
+          result: null,
+        });
+      }
       if (compare(req.body.password, result.password)) {
         // generate token
         result.password = "xxxxxxxxxxxxxxxxxx";
