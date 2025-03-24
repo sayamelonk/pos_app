@@ -88,7 +88,7 @@ export const createProduct = async (req, res) => {
 export const getAllProduct = async (req, res) => {
   const last_id = parseInt(req.query.lastId) || 0;
   const limit = parseInt(req.query.limit) || 10;
-  const search = req.query.search || "";
+  const search = req.query.search_query || "";  // Use search_query to match frontend
   let result = [];
   try {
     if (last_id < 1) {
@@ -101,9 +101,9 @@ export const getAllProduct = async (req, res) => {
           OR
           barcode LIKE ${`%${search}%`}
           OR
-          qty LIKE ${`%${search}%`}
+          CAST(qty AS CHAR) LIKE ${`%${search}%`}
           OR
-          price LIKE ${`%${search}%`}
+          CAST(price AS CHAR) LIKE ${`%${search}%`}
         )
         ORDER BY id DESC LIMIT ${limit}`;
     } else {
@@ -126,7 +126,7 @@ export const getAllProduct = async (req, res) => {
     return res.status(200).json({
       message: "get all product successfully",
       result,
-      lastId: result.length > 0 ? 0 : result[result.length - 1].id,
+      lastId: result.length > 0 ? result[result.length - 1].id : 0,
       hasMore: result.length >= limit ? true : false,
     });
   } catch (error) {
@@ -136,7 +136,7 @@ export const getAllProduct = async (req, res) => {
     return res.status(500).json({
       message: error.message,
       result: null,
-      lastId: result.length > 0 ? 0 : result[result.length - 1].id,
+      lastId: result.length > 0 ? result[result.length - 1].id : 0,
       hasMore: result.length >= limit ? true : false,
     });
   }
