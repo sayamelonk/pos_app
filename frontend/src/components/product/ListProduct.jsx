@@ -36,7 +36,7 @@ const ListProduct = () => {
     };
     try {
       const response = await axiosInstance.request(reqOptions);
-      console.log("API Response:", response.data); // Debugging log
+      // console.log("API Response:", response.data); // Debugging log
       const newData = response.data.result;
       setData([...data, ...newData]);
       setTempId(response.data.lastId);
@@ -50,7 +50,7 @@ const ListProduct = () => {
   }, [data, keyword, lastId, limit]);
 
   useEffect(() => {
-    console.log("Loading data with keyword:", keyword); // Debugging log
+    // console.log("Loading data with keyword:", keyword); // Debugging log
     setChange(2);
     loadData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -66,7 +66,7 @@ const ListProduct = () => {
     setLastId(0);
     setData([]);
     setKeyword(query);
-    console.log("Searching for:", query); // Debugging log
+    // console.log("Searching for:", query); // Debugging log
     loadData();
   };
 
