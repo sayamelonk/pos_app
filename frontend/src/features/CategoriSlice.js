@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { axiosInstance } from "../auth/AxiosConfig";
+import { axiosInstance } from "../auth/AxiosConfig.jsx";
 
 let reqOptionsGetAll = {
   url: "/api/categories",
@@ -33,7 +33,7 @@ const categorySlice = createSlice({
     });
     builder.addCase(getAllCategory.fulfilled, (state, action) => {
       state.loading = false;
-      state.categories = action.payload;
+      state.data = action.payload;
     });
     builder.addCase(getAllCategory.rejected, (state, action) => {
       state.loading = false;
