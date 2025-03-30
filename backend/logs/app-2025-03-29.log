@@ -1,0 +1,534 @@
+[LOGGER] 2025-03-29 14:41:47.579 PM error : controllers/order.controller.js : createOrder : 
+Invalid `prisma.orders.create()` invocation:
+
+{
+  data: {
+    code: "ORD-1743230507558",
+    userId: NaN,
+    date: undefined,
+    total: 2000,
+    ppn: 220,
+    grandTotal: 2220,
++   user: {
++     create: UserCreateWithoutOrdersInput | UserUncheckedCreateWithoutOrdersInput,
++     connectOrCreate: UserCreateOrConnectWithoutOrdersInput,
++     connect: UserWhereUniqueInput
++   }
+  }
+}
+
+Argument `user` is missing.
+[LOGGER] 2025-03-29 17:46:53.788 PM error : controllers/order.controller.js : createOrder : 
+Invalid `prisma.orders.create()` invocation:
+
+{
+  data: {
+    code: "ORD-1743241613780",
+    userId: NaN,
+    date: undefined,
+    total: 2000,
+    ppn: 220,
+    grandTotal: 2220,
++   user: {
++     create: UserCreateWithoutOrdersInput | UserUncheckedCreateWithoutOrdersInput,
++     connectOrCreate: UserCreateOrConnectWithoutOrdersInput,
++     connect: UserWhereUniqueInput
++   }
+  }
+}
+
+Argument `user` is missing.
+[LOGGER] 2025-03-29 17:47:15.182 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 17:47:22.061 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 17:49:40.346 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 18:02:05.359 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 18:54:10.712 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 18:57:05.531 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 18:57:23.414 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 19:02:30.145 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 19:02:54.936 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 19:16:50.335 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 19:17:00.773 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 19:29:00.917 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 20:40:18.929 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 21:35:58.001 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 21:39:24.618 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 21:58:34.292 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 22:01:49.933 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 22:06:42.386 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 22:13:11.630 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 22:13:42.233 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 22:16:35.386 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-03-29 22:17:04.088 PM error : controllers/cart.controller.js:updateCart - 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
+    id: NaN
+  },
+  data: {
+    productName: undefined,
+    qty: NaN,
+    totalPrice: NaN,
+    note: undefined,
+    productId: NaN,
+    userId: undefined,
++   price: Decimal
+  }
+}
+
+Argument `price` is missing.
+[LOGGER] 2025-03-29 22:18:30.439 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
+    id: NaN
+  },
+  data: {
+    productName: undefined,
+    qty: NaN,
+    totalPrice: NaN,
+    note: undefined,
+    productId: NaN,
+    userId: undefined,
++   price: Decimal
+  }
+}
+
+Argument `price` is missing.
+[LOGGER] 2025-03-29 22:19:23.739 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
+    id: NaN
+  },
+  data: {
+    productName: undefined,
+    qty: NaN,
+    totalPrice: NaN,
+    note: undefined,
+    productId: NaN,
+    userId: undefined,
++   price: Decimal
+  }
+}
+
+Argument `price` is missing.
+[LOGGER] 2025-03-29 22:19:35.949 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
+    id: NaN
+  },
+  data: {
+    productName: undefined,
+    qty: NaN,
+    totalPrice: NaN,
+    note: undefined,
+    productId: NaN,
+    userId: undefined,
++   price: Decimal
+  }
+}
+
+Argument `price` is missing.
+[LOGGER] 2025-03-29 22:26:45.620 PM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  data: {
+    price: undefined,
+    productName: undefined,
+    qty: undefined,
+    totalPrice: undefined,
+    note: undefined,
+    productId: undefined,
+    userId: undefined
+  }
+}
+
+Argument `id` is missing.

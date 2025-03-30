@@ -7,29 +7,29 @@ import excelJS from "exceljs";
 
 export const createOrder = async (req, res) => {
   try {
-    const createTransaction = await prisma.$transaction(async (prisma) => {
-      // create order
-      const createData = await prisma.orders.create({
+    const data = await prisma.$transaction(async (prisma) => {
+      // insert order
+      const post = await prisma.orders.create({
         data: {
           code: setOrderCode("ORD-"),
-          userId: Number(req.body.userId),
           date: req.body.date,
           total: req.body.total,
           ppn: req.body.ppn,
           grandTotal: req.body.grandTotal,
+          userId: Number(req.params.userId),
         },
       });
-      // create order detail
+      // insert detail
       for (let i = 0; i < req.body.detail.length; i++) {
         await prisma.orderdetail.create({
           data: {
-            productId: req.body.detail[i].productId,
-            orderId: createData.id,
-            productName: req.body.detail[i].productName,
             price: req.body.detail[i].price,
+            productName: req.body.detail[i].productName,
             qty: req.body.detail[i].qty,
             totalPrice: req.body.detail[i].totalPrice,
             note: req.body.detail[i].note,
+            orderId: post.id,
+            productId: req.body.detail[i].productId,
           },
         });
         // update stock
@@ -47,14 +47,14 @@ export const createOrder = async (req, res) => {
       // delete cart
       await prisma.carts.deleteMany({
         where: {
-          userId: Number(req.body.userId),
+          userId: Number(req.params.userId),
         },
       });
-      return createData;
+      return post;
     });
     return res.status(200).json({
       message: "Order created successfully",
-      result: createTransaction,
+      result: data,
     });
   } catch (error) {
     logger.error(

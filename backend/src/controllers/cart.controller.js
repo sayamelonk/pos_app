@@ -51,18 +51,18 @@ export const getAllCart = async (req, res) => {
   }
 };
 
-export const getCartByIdProductId = async (req, res) => {
-  const params = req.params;
+export const getCartByProductId = async (req, res) => {
+  const param = req.params;
   try {
     const result = await prisma.carts.findMany({
       where: {
-        productId: Number(params.id),
-        userId: Number(params.userId),
+        productId: Number(param.id),
+        userId: Number(param.userId),
       },
     });
     return res.status(200).json({
       message: "Cart found by id successfully",
-      result,
+      result: result[0],
     });
   } catch (error) {
     logger.error(
@@ -82,12 +82,12 @@ export const updateCart = async (req, res) => {
         id: Number(req.params.id),
       },
       data: {
-        price: req.body.price,
+        price: Number(req.body.price),
         productName: req.body.productName,
-        qty: req.body.qty,
-        totalPrice: req.body.totalPrice,
+        qty: Number(req.body.qty),
+        totalPrice: Number(req.body.totalPrice),
         note: req.body.note,
-        productId: req.body.productId,
+        productId: Number(req.body.productId),
         userId: req.body.userId,
       },
     });

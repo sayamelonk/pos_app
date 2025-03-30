@@ -1,0 +1,117 @@
+[LOGGER] 2025-03-30 05:23:54.400 AM error : controllers/user.controller.js : loginUser - 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+Can't reach database server at `localhost:3306`
+
+Please make sure your database server is running at `localhost:3306`.
+[LOGGER] 2025-03-30 05:25:47.004 AM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to update not found.
+[LOGGER] 2025-03-30 05:25:58.972 AM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to update not found.
+[LOGGER] 2025-03-30 05:26:14.215 AM error : controllers/cart.controller.js : deleteCart : 
+Invalid `prisma.carts.delete()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to delete does not exist.
+[LOGGER] 2025-03-30 05:26:21.071 AM error : controllers/cart.controller.js : deleteCart : 
+Invalid `prisma.carts.delete()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to delete does not exist.
+[LOGGER] 2025-03-30 05:27:00.588 AM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to update not found.
+[LOGGER] 2025-03-30 05:27:05.228 AM error : controllers/cart.controller.js : updateCart : 
+Invalid `prisma.carts.update()` invocation:
+
+
+An operation failed because it depends on one or more records that were required but not found. Record to update not found.
+[LOGGER] 2025-03-30 05:43:42.925 AM error : controllers/order.controller.js : createOrder : 
+Invalid `prisma.orders.create()` invocation:
+
+{
+  data: {
+    code: "ORD-1743284622915",
+    userId: NaN,
+    date: "2025-03-29T20:43:42.000Z",
+    total: 35000,
+    ppn: 3850,
+    grandTotal: 38850,
++   user: {
++     create: UserCreateWithoutOrdersInput | UserUncheckedCreateWithoutOrdersInput,
++     connectOrCreate: UserCreateOrConnectWithoutOrdersInput,
++     connect: UserWhereUniqueInput
++   }
+  }
+}
+
+Argument `user` is missing.
+[LOGGER] 2025-03-30 05:49:13.128 AM error : controllers/order.controller.js : createOrder : 
+Invalid `prisma.orders.create()` invocation:
+
+{
+  data: {
+    code: "ORD-1743284953117",
+    userId: NaN,
+    date: "2025-03-29T20:49:13.000Z",
+    total: 35000,
+    ppn: 3850,
+    grandTotal: 38850,
++   user: {
++     create: UserCreateWithoutOrdersInput | UserUncheckedCreateWithoutOrdersInput,
++     connectOrCreate: UserCreateOrConnectWithoutOrdersInput,
++     connect: UserWhereUniqueInput
++   }
+  }
+}
+
+Argument `user` is missing.
+[LOGGER] 2025-03-30 05:53:21.488 AM error : controllers/order.controller.js : createOrder : 
+Invalid `prisma.orders.create()` invocation:
+
+{
+  data: {
+    code: "ORD-1743285201477",
+    userId: NaN,
+    date: "2025-03-29T20:53:21.000Z",
+    total: 35000,
+    ppn: 3850,
+    grandTotal: 38850,
++   user: {
++     create: UserCreateWithoutOrdersInput | UserUncheckedCreateWithoutOrdersInput,
++     connectOrCreate: UserCreateOrConnectWithoutOrdersInput,
++     connect: UserWhereUniqueInput
++   }
+  }
+}
+
+Argument `user` is missing.
+[LOGGER] 2025-03-30 17:28:41.231 PM error : controllers/order.controller.js : createOrder : 
+Invalid `prisma.orders.create()` invocation:
+
+{
+  data: {
+    code: "ORD-1743326921222",
+    userId: NaN,
+    date: "2025-03-30T08:28:41.000Z",
+    total: 35000,
+    ppn: 3850,
+    grandTotal: 38850,
++   user: {
++     create: UserCreateWithoutOrdersInput | UserUncheckedCreateWithoutOrdersInput,
++     connectOrCreate: UserCreateOrConnectWithoutOrdersInput,
++     connect: UserWhereUniqueInput
++   }
+  }
+}
+
+Argument `user` is missing.
