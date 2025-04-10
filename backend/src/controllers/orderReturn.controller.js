@@ -24,7 +24,7 @@ export const createOrderReturn = async (req, res) => {
         },
       });
       // loop order detail
-      for (let i = 0; 1 < value.detail.length; i++) {
+      for (let i = 0; i < value.detail.length; i++) {
         // validasi product dan qty
         if (
           Number(value.detail[i].qty) == 0 ||

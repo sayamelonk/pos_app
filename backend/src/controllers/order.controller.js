@@ -4,6 +4,7 @@ import { logger } from "../utils/winston.js";
 import fs from "fs";
 import pdf from "pdf-creator-node";
 import excelJS from "exceljs";
+import prism from "@prisma/client"
 
 export const createOrder = async (req, res) => {
   try {
@@ -70,45 +71,46 @@ export const createOrder = async (req, res) => {
 export const getAllOrder = async (req, res) => {
   const last_id = parseInt(req.query.lastId) || 0;
   const limit = parseInt(req.query.limit) || 10;
-  const search = req.query.search || "";
+  const search = req.query.search_query || "";
   let result = [];
   try {
     if (last_id < 1) {
-      result = await prisma.$queryRaw`SELECT * FROM orders
-        WHERE (
-          code LIKE ${`%${search}%`}
-          OR
-          date LIKE ${`%${search}%`}
-          OR
-          total LIKE ${`%${search}%`}
-          OR
-          ppn LIKE ${`%${search}%`}
-          OR
-          grandTotal LIKE ${`%${search}%`}
-        )
-        ORDER BY id DESC LIMIT ${limit}`;
+      result = await prisma.$queryRaw(
+        prism.sql`SELECT id, code, date, total, ppn, grandTotal
+          FROM orders
+          WHERE (
+            code LIKE CONCAT('%', ${search}, '%')
+            OR date LIKE CONCAT('%', ${search}, '%')
+            OR total LIKE CONCAT('%', ${search}, '%')
+            OR ppn LIKE CONCAT('%', ${search}, '%')
+            OR grandTotal LIKE CONCAT('%', ${search}, '%')
+          )
+          ORDER BY id DESC 
+          LIMIT ${limit};`
+      );
     } else {
-      result = await prisma.$queryRaw`SELECT * FROM orders
-        WHERE (
-          code LIKE ${`%${search}%`}
-          OR
-          date LIKE ${`%${search}%`}
-          OR
-          total LIKE ${`%${search}%`}
-          OR
-          ppn LIKE ${`%${search}%`}
-          OR
-          grandTotal LIKE ${`%${search}%`}
-        ) AND id < ${last_id}
-        ORDER BY id DESC LIMIT ${limit}`;
+      result = await prisma.$queryRaw(
+        prism.sql`SELECT id, code, date, total, ppn, grandTotal
+          FROM Orders 
+          WHERE (
+            code LIKE CONCAT('%', ${search}, '%')
+            OR date LIKE CONCAT('%', ${search}, '%')
+            OR total LIKE CONCAT('%', ${search}, '%')
+            OR ppn LIKE CONCAT('%', ${search}, '%')
+            OR grandTotal LIKE CONCAT('%', ${search}, '%')
+          )
+        AND id < ${last_id}
+        ORDER BY id DESC 
+        LIMIT ${limit};`
+      );
     }
     return res.status(200).json({
-      message: "Order found successfully",
+      message: "success",
       result,
     });
   } catch (error) {
     logger.error(
-      "controllers/order.controller.js : getAllOrder : " + error.message
+      "controllers/order.controller.js:getAllOrder - " + error.message
     );
     return res.status(500).json({
       message: error.message,

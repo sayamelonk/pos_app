@@ -1,0 +1,30 @@
+[LOGGER] 2025-04-10 08:42:34.369 AM error : controllers/order.controller.js : getOrderById : 
+Invalid `prisma.orders.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    Orderdetail: true
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-04-10 08:42:34.412 AM error : controllers/order.controller.js : getOrderById : 
+Invalid `prisma.orders.findUnique()` invocation:
+
+{
+  where: {
++   id: Int
+  },
+  include: {
+    Orderdetail: true
+  }
+}
+
+Argument `id` is missing.
+[LOGGER] 2025-04-10 10:15:03.142 AM error : uncaughtException: createOrder is not defined
+ReferenceError: createOrder is not defined
+    at file:///Applications/XAMPP/xamppfiles/htdocs/POS/POS_APP/backend/src/routes/order.route.js:14:49
+    at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
