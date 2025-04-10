@@ -28,3 +28,8 @@ Argument `id` is missing.
 ReferenceError: createOrder is not defined
     at file:///Applications/XAMPP/xamppfiles/htdocs/POS/POS_APP/backend/src/routes/order.route.js:14:49
     at ModuleJob.run (node:internal/modules/esm/module_job:194:25)
+[LOGGER] 2025-04-10 13:19:51.173 PM error : controllers/orderReturn.controller.js : createOrderReturn : Cannot read properties of undefined (reading 'create')
+[LOGGER] 2025-04-10 13:20:01.329 PM error : controllers/orderReturn.controller.js : createOrderReturn : Cannot read properties of undefined (reading 'create')
+[LOGGER] 2025-04-10 13:37:09.809 PM error : controllers/orderReturn.controller.js : createOrderReturn : qty and product cannot be empty
+[LOGGER] 2025-04-10 13:37:19.026 PM error : controllers/orderReturn.controller.js : createOrderReturn : Cannot read properties of undefined (reading 'create')
+[LOGGER] 2025-04-10 13:37:30.344 PM error : controllers/orderReturn.controller.js : createOrderReturn : Cannot read properties of undefined (reading 'create')

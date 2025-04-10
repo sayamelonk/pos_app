@@ -13,8 +13,8 @@ export const createOrderReturn = async (req, res) => {
   }
   try {
     const data = await prisma.$transaction(async (prisma) => {
-      // create order return
-      const createReturn = await prisma.orderreturn.create({
+      // insert order return
+      const retur = await prisma.orderreturn.create({
         data: {
           code: setOrderCode("ORDR-"),
           date: value.date,
@@ -34,14 +34,14 @@ export const createOrderReturn = async (req, res) => {
           throw new Error("qty and product cannot be empty");
         }
         // insert order detail
-        await prisma.orderreturnDetail.create({
+        await prisma.orderreturndetail.create({
           data: {
             productId: Number(value.detail[i].product.productId),
             productName: value.detail[i].product.productName,
             price: Number(value.detail[i].product.price),
             qty: Number(value.detail[i].qty),
             total: Number(value.detail[i].totalPrice),
-            returnId: Number(createReturn.id),
+            returnId: Number(retur.id),
           },
         });
         // update stock
@@ -56,15 +56,15 @@ export const createOrderReturn = async (req, res) => {
           },
         });
       }
-      return createReturn;
+      return retur;
     });
     return res.status(200).json({
-      message: "Order return created successfully",
+      message: "success",
       result: data,
     });
   } catch (error) {
     logger.error(
-      "controllers/orderReturn.controller.js : createOrderReturn : " +
+      "controllers/orderReturn.controller.js:insertOrderReturn - " +
         error.message
     );
     return res.status(500).json({
