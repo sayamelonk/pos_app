@@ -13,7 +13,7 @@ import {
   Row,
   Table,
 } from "react-bootstrap";
-import DatePicker from "react-date-picker";
+import DatePicker from "react-datepicker";
 import { IoMdAdd } from "react-icons/io";
 import { FaSave } from "react-icons/fa";
 
@@ -109,7 +109,7 @@ const SalesReturn = () => {
       url: "/api/order-returns",
       method: "POST",
       data: bodyContent,
-   };
+    };
     try {
       const response = await axiosInstance.request(reqOptions);
       if (response.data) {
@@ -142,7 +142,7 @@ const SalesReturn = () => {
             </Breadcrumb>
           </Col>
         </Row>
-        <Row className="m-3 bg-body-tertiary rounded p-3">
+        <Row className="mt-3 bg-body-tertiary rounded p-3">
           <Col>
             <form onSubmit={handleSubmit}>
               <Form.Group as={Row} className="mb-3">
@@ -186,6 +186,7 @@ const SalesReturn = () => {
                         <th>Quantity</th>
                         <th>Unit Price</th>
                         <th>Subtotal</th>
+                        <th></th>
                       </tr>
                     </thead>
                     <tbody>
