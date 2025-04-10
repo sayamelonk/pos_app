@@ -79,14 +79,17 @@ const SalesReturn = () => {
   };
 
   const handleChange = (e, i) => {
-    const { name, value } = e.targe;
+    const { name, value } = e.target;
     const onChangeVal = [...data];
     onChangeVal[i][name] = value;
     if (name == "qty") {
       onChangeVal[i].totalPrice = onChangeVal[i].qty * onChangeVal[i].price;
     }
     if (name == "product") {
-      const product = JSON.parse(onChangeVal[i].qty) * product.price;
+      const product = JSON.parse(onChangeVal[i].product);
+      onChangeVal[i].product = product;
+      onChangeVal[i].price = product.price;
+      onChangeVal[i].totalPrice = Number(onChangeVal[i].qty) * product.price;
     }
     setData(onChangeVal);
   };
@@ -106,7 +109,7 @@ const SalesReturn = () => {
       url: "/api/order-returns",
       method: "POST",
       data: bodyContent,
-    };
+   };
     try {
       const response = await axiosInstance.request(reqOptions);
       if (response.data) {
@@ -196,7 +199,7 @@ const SalesReturn = () => {
                               name="product"
                               onChange={(e) => handleChange(e, index)}
                             >
-                              <option value="">Select Product</option>
+                              <option value="">-Select Product-</option>
                               {product.map((item, index) => (
                                 <option
                                   key={index}
