@@ -18,6 +18,9 @@ import ListSales from "../components/sales/ListSales";
 import OrderSend from "../components/sales/OrderSend";
 import ListSalesHistory from "../components/salesHistory/ListSalesHistory";
 import SalesReturn from "../components/salesHistory/SalesReturn";
+import ListPurchase from "../components/purchase/ListPurchase";
+import AddPurchase from "../components/purchase/AddPurchase";
+import PrintPurchase from "../components/purchase/PrintPurchase";
 
 const RouteNavigation = () => {
   const refreshToken = secureLocalStorage.getItem("refreshToken");
@@ -49,6 +52,10 @@ const RouteNavigation = () => {
               {/* sales history */}
               <Route path="/sales-history" element={<ListSalesHistory />} />
               <Route path="/sales-return/:id" element={<SalesReturn />} />
+              {/* purchase */}
+              <Route path="/purchase" element={<ListPurchase />} />
+              <Route path="/purchase/add" element={<AddPurchase />} />
+              <Route path="/purchase/print/:id" element={<PrintPurchase />} />
             </Routes>
           </BrowserRouter>
         </>
